@@ -1,7 +1,6 @@
 const path = require('path')
 const htmlWebpack = require('html-webpack-plugin')
 const miniCssExtract = require('mini-css-extract-plugin')
-const liveReload = require('webpack-livereload-plugin');
 
 module.exports = {
 
