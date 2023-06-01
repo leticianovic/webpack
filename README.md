@@ -32,4 +32,13 @@
  - Gerenciamento de dependências
  - Desenvolvimento x Produção
 
-- Cria um diretório (build) com uma compilação de produção do seu aplicativo: `npm run build`
+-- Rodar servidor local `http-server ./dist`
+- Cria um diretório (build) com uma compilação de produção do seu aplicativo: `npm run build` ou `npm run watch`
+
+## Melhorando a compatibilidade do JS com Babel
+- Babel transforma o código JS para uma versão com maior compatibilidade para navegadores antigos
+    `npm install --save-dev @babel/core @babel/preset-env babel-loader`
+
+## Trabalhando com imagens
+- Adicionar file loader
+    `npm install --save-dev file-loader`

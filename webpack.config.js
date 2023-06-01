@@ -1,6 +1,7 @@
 const path = require('path')
 const htmlWebpack = require('html-webpack-plugin')
 const miniCssExtract = require('mini-css-extract-plugin')
+const liveReload = require('webpack-livereload-plugin');
 
 module.exports = {
 
@@ -25,6 +26,25 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.js$/i,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
+            {
+                test: /\.(jpeg|jpg|png|svg|gif)$/i,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]'
+                    }
+                }
             }
         ]
     },
